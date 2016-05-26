@@ -5,6 +5,8 @@ class StudentsController < ApplicationController
   def create
     if student.save
       redirect_to student_path(student), notice: I18n.t('shared.created', resource: 'Student')
+
+      #flash[:notice]).to eq I18n.t('shared.created', resource: 'Student'
     else
       render :new
     end
@@ -21,5 +23,21 @@ class StudentsController < ApplicationController
   def destroy
     student.destroy
     redirect_to students_path, notice: I18n.t('shared.deleted', resource: 'Student')
+  end
+
+  def show #nowy
+    render :show
+  end
+
+  def index #nowy
+    render :index
+  end
+
+  def edit #nowy
+    render :edit
+  end
+
+  def new
+    render :new
   end
 end
