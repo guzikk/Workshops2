@@ -14,7 +14,7 @@ teachers = Teacher.all
 5.times do
   SubjectItem.create!(
     title: Faker::Lorem.sentence,
-    teacher_id: teachers.sample
+    teacher: teachers.sample
   )
 end
 

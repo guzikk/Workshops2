@@ -28,9 +28,6 @@ class TeachersController < ApplicationController
   end
 
 
- def show #nowy
-    render :show
-  end
   private
 
   def teacher_params
