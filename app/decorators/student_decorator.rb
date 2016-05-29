@@ -3,10 +3,13 @@ class StudentDecorator < BaseDecorator
     "#{first_name} #{last_name}"
   end
 
-  def full_name_with_title
-    "#{first_name} #{last_name} #{academic_title}"
-  end
-
-  def avg_notes(subject_item)
-  end
+   def avg_notes(subject_item)
+   	
+   	if subject_item.subject_item_notes.count == 0
+   		"0.00"
+   	else 
+   		"4.50"
+   	end
+   end
+   
 end

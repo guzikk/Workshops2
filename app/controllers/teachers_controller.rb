@@ -3,7 +3,7 @@ class TeachersController < ApplicationController
   expose(:teachers)
   expose(:teacher, attributes: :teacher_params)
   expose(:teacher_subject_items) { teacher.subject_items }
-  expose(:full_name_with_title) 
+  expose(:subject_items) 
 
 
   def create
@@ -27,9 +27,14 @@ class TeachersController < ApplicationController
     redirect_to teachers_path, notice: I18n.t('shared.deleted', resource: 'Teacher')
   end
 
+
+ def show #nowy
+    render :show
+  end
   private
 
   def teacher_params
     params.require(:teacher).permit(:first_name, :last_name, :academic_title, subject_item_ids: [])
   end
 end
+

@@ -11,7 +11,13 @@ en:
     error_notification:
       default_message: "Please review the problems below:"
     # Examples
-    # labels:
+     #labels:
+      #student:
+       # new:
+       #    submit: 'Create Student'
+       # edit:
+        #   email: 'Update Student'
+
     #   defaults:
     #     password: 'Password'
     #   user:

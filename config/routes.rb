@@ -6,11 +6,13 @@ Rails.application.routes.draw do
   resources :teachers do
     get :subjects
   end
-  
-  get 'reports/subjects' => 'reports#subjects'
+
+  get 'report/subjects' => 'reports#subjects'
 
   #resources :reports do
-  #		get :subjects
-#  end
+   # member do
+  	#	get :subjects
+ #end
+#end
   root 'visitors#index'
 end

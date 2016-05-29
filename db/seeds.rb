@@ -15,7 +15,6 @@ teachers = Teacher.all
   SubjectItem.create!(
     title: Faker::Lorem.sentence,
     teacher_id: teachers.sample
-    #(rand(1..3))
   )
 end
 
