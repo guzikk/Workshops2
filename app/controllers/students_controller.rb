@@ -1,11 +1,13 @@
 class StudentsController < ApplicationController
+  before_action :authenticate_user!
+  expose(:students)
   expose(:student, attributes: :student_params)
   expose(:student_subject_items) { student.subject_items }
 
   def create
     if student.save
       redirect_to student_path(student), notice: I18n.t('shared.created', resource: 'Student')
-
+                                                 #I18n.t('shared.created', resource: 'Student')
       #flash[:notice]).to eq I18n.t('shared.created', resource: 'Student'
     else
       render :new
@@ -39,5 +41,14 @@ class StudentsController < ApplicationController
 
   def new
     render :new
+  end
+
+ # def subjects
+  #end
+
+  private
+
+  def student_params
+    params.require(:student).permit(:first_name, :last_name, :subject_items)
   end
 end

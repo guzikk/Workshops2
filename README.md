@@ -1,3 +1,5 @@
+https://travis-ci.org/guzikk/Workshops2.svg?branch=master
+
 RoR Workshops
 ================
 
