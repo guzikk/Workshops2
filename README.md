@@ -1,4 +1,4 @@
-https://travis-ci.org/guzikk/Workshops2.svg?branch=master
+=link_to image_tag(https://travis-ci.org/guzikk/Workshops2.svg?branch=master)
 
 RoR Workshops
 ================
